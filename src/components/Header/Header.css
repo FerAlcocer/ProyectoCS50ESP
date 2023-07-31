@@ -7,7 +7,26 @@ img{
   width: 100px;
   max-width: 100%;
 }
-.nav__principal{
+
+.header {
   display: flex;
   justify-content: space-between;
+
+}
+.header__img {
+
+}
+.header__title title{
+
+}
+
+.title--bold{
+
+}
+
+.header__user {
+
+}
+.header__button {
+
 }

@@ -5,3 +5,5 @@ export * from "./FAQS"
 export * from "./Progreso"
 export * from "./Temario"
 export * from "./WhatsNew"
+
+export * from "./Header/Header"
