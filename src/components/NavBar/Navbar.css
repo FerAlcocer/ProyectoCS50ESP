@@ -1,0 +1,13 @@
+body {
+
+  font-family: serif;
+}
+
+img{
+  width: 100px;
+  max-width: 100%;
+}
+.nav__principal{
+  display: flex;
+  justify-content: space-between;
+}
