@@ -1,0 +1,44 @@
+.pruebas {
+  margin: 1rem 0;
+  border: 2px solid red;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a726d6;
+}
+
+.pruebas__h1 {
+  padding: 0;
+  color: black;
+  background-color: seagreen;
+  border: 2px solid red;
+  margin: 0;
+}
+
+.pruebas__nivel1 {
+  border: 2px solid blue;
+  height: 200px;
+  width: 30%;
+}
+
+.pruebas__nivel1--centro {
+  border: 2px solid blue;
+  height: 200px;
+  width: 30%;
+  color: blue;
+  background-color: blue;
+  font-size: 30px;
+}
+
+.pruebas__nivel2 {
+  border: 2px solid green;
+  height: 100px;
+  width: 50%;
+}
+
+.pruebas__nivel3 {
+  border: 2px solid violet;
+  width: 50%;
+  height: 50px;
+}
