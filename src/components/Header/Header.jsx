@@ -1,16 +1,14 @@
+import { useState } from 'react';
 import { images } from '../../constants';
 import './Header.css';
 
 export const Header = () => {
-  // const panelUsuario = [
-  //   'Panel de Control',
-  //   'Carrera',
-  //   'Perfil',
-  //   'Cuenta',
-  //   'Pedidos y Subscripciones',
-  //   'Cerrar sesión',
-  // ];
+  const [userClicked, setUserClicked] = useState(false);
 
+  const handleClick = () => {
+    setUserClicked(!userClicked);
+    console.log(userClicked);
+  };
   return (
     <>
       <header className="header">
@@ -28,18 +26,43 @@ export const Header = () => {
 
             <div className="header__user user">
               <p className="user__title">Ayuda</p>
-              <button className="header__button">
-                Usuario
-                <ul className="user__submenu submenu">
+              <button
+                className={`header__button button${
+                  userClicked ? '--active' : ''
+                }`}
+                onClick={handleClick}
+              >
+                <span className="button--full">
+                  Usuario
+                  <span className="material-symbols-outlined">expand_more</span>
+                </span>
+
+                <span className="button--chico">
+                  <span className="material-symbols-outlined">
+                    account_circle
+                    <span className="material-symbols-outlined">
+                      expand_more
+                    </span>
+                  </span>
+                </span>
+
+                <ul
+                  className={`user__submenu${
+                    userClicked ? '--active' : ''
+                  } submenu`}
+                >
                   <li>
                     <a href="#" className="submenu__elemento">
                       Panel de Control
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="submenu__elemento">
-                      Carrera
-                    </a>
+                    <div className="wrapper">
+                      <a href="#" className="submenu__elemento">
+                        Carrera
+                        <span className="submenu__elemento--nuevo">Nuevo</span>
+                      </a>
+                    </div>
                   </li>
                   <li>
                     <a href="#" className="submenu__elemento">
@@ -73,13 +96,13 @@ export const Header = () => {
             <li className="nav__item sm">Fechas</li>
             <li className="nav__item sm">Discusion</li>
 
-            <li className="nav__item md__1 no-visible">FAQs</li>
-            <li className="nav__item md__1">
+            <li className="nav__item md__1 ">FAQs</li>
+            <li className="nav__item md__1 no visible">
               Más...
               <a href="#"></a>
             </li>
-            <li className="nav__item md__2 no-visible">Progreso</li>
-            <li className="nav__item md__2 no-visible">
+            <li className="nav__item md__2 ">Progreso</li>
+            <li className="nav__item md__2 ">
               Más...
               <a href="#"></a>
             </li>
