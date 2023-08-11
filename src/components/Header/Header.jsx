@@ -4,10 +4,14 @@ import './Header.css';
 
 export const Header = () => {
   const [userClicked, setUserClicked] = useState(false);
+  const [moreClicked, setMoreClicked] = useState(false);
 
-  const handleClick = () => {
-    setUserClicked(!userClicked);
-    console.log(userClicked);
+  const handleClick = (stateToUpdate) => {
+    if (stateToUpdate === 'user') {
+      setUserClicked(!userClicked);
+    } else if (stateToUpdate === 'more') {
+      setMoreClicked(!moreClicked);
+    }
   };
   return (
     <>
@@ -30,7 +34,7 @@ export const Header = () => {
                 className={`header__button button${
                   userClicked ? '--active' : ''
                 }`}
-                onClick={handleClick}
+                onClick={() => handleClick('user')}
               >
                 <span className="button--full">
                   Usuario
@@ -38,12 +42,11 @@ export const Header = () => {
                 </span>
 
                 <span className="button--chico">
-                  <span className="material-symbols-outlined">
+                  <div className=" account-circle"></div>
+                  <span className="material-symbols-outlined account-circle">
                     account_circle
-                    <span className="material-symbols-outlined">
-                      expand_more
-                    </span>
                   </span>
+                  <span className="material-symbols-outlined">expand_more</span>
                 </span>
 
                 <ul

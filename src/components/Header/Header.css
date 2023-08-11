@@ -103,9 +103,12 @@ hr {
 .header__button {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 2.8rem;
   cursor: pointer;
   position: relative;
   align-items: center;
+  justify-content: center;
   padding: 0.8rem;
   font-weight: bolder;
   border: 1px solid var(--light);
@@ -116,6 +119,16 @@ hr {
   color: var(--white);
 } */
 
+.button--full,
+.button--chico {
+  display: flex;
+  align-items: center;
+}
+
+.account-circle {
+  color: #00262b;
+  font-size: bolder;
+}
 .button--active {
   border: 1px solid black;
 }
