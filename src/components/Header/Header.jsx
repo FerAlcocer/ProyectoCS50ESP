@@ -99,25 +99,79 @@ export const Header = () => {
             <li className="nav__item sm">Fechas</li>
             <li className="nav__item sm">Discusion</li>
 
-            <li className="nav__item md__1 ">FAQs</li>
-            <li className="nav__item md__1 no visible">
+            <li className="nav__item md__1 no-visible">FAQs</li>
+            <li className="nav__item md__1 more ">
               Más...
-              <a href="#"></a>
+              <ul className="more__submenu list">
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    FAQs
+                  </a>
+                </li>
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Progreso
+                  </a>
+                </li>
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Temario
+                  </a>
+                </li>
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Novedades
+                  </a>
+                </li>
+              </ul>
             </li>
-            <li className="nav__item md__2 ">Progreso</li>
-            <li className="nav__item md__2 ">
+            <li className="nav__item md__2 no-visible">Progreso</li>
+            <li className="nav__item md__2  more no-visible">
               Más...
-              <a href="#"></a>
+              <ul className="more__submenu list">
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Progreso
+                  </a>
+                </li>
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Temario
+                  </a>
+                </li>
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Novedades
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="nav__item L__1 no-visible">Temario</li>
-            <li className="nav__item L__1 no-visible">
+            <li className="nav__item L__1  more no-visible">
               Más...
-              <a href="#"></a>
+              <ul className="more__submenu list">
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Temario
+                  </a>
+                </li>
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Novedades
+                  </a>
+                </li>
+              </ul>
             </li>
             <li className="nav__item L__2 no-visible">Novedades</li>
-            <li className="nav__item L__2 no-visible">
+            <li className="nav__item L__2  more no-visible">
               Más...
-              <a href="#"></a>
+              <ul className="more__submenu list">
+                <li>
+                  <a className="submenu__elemento" href="#">
+                    Novedades
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </nav>
